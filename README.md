@@ -9,6 +9,7 @@ This project uses Terraform to create a basic S3 bucket on AWS.
 - AWS CLI configured with your credentials
 
 ## Project Structure
+```
 ├── .gitignore
 ├── .terraform/ 
 ├── .terraform.lock.hcl 
@@ -18,7 +19,7 @@ This project uses Terraform to create a basic S3 bucket on AWS.
 ├── terraform.tfstate 
 ├── terraform.tfstate.backup 
 ├── variables.tf
-
+```
 
 ## Files
 - `bucket.tf`: Defines the S3 bucket resource.
@@ -31,11 +32,12 @@ This project uses Terraform to create a basic S3 bucket on AWS.
 
 1. Clone the repository:
     ```sh
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/javiguerra777/terraform-s3-project.git
     ```
 
-2.  **Create a `variables.tf` file:**
+2. After cloning the repository to your computer you will see a folder called `terraform-s3-project`, open this folder in a code editor of choice. 
+
+3.  **Create a `variables.tf` file:**
     You will need to create a `variables.tf` file and structure it like this before you run the terraform project:
     ```hcl
     variable "bucket_name" {}
@@ -70,7 +72,11 @@ This project uses Terraform to create a basic S3 bucket on AWS.
     terraform apply
     ```
 
-4. Confirm the apply step by typing `yes`.
+4. When prompted enter a bucket name of choice for your s3 bucket (this value must be unique) 
+
+5. Confirm the apply step by typing `yes`.
+
+6. If you go to your AWS S3 buckets you can see the newest s3 bucket you created
 
 ## Variables
 
